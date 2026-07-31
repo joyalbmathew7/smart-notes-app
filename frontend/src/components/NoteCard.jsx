@@ -1,20 +1,20 @@
 function NoteCard({ note, deleteNote, editNote }) {
   return (
-    <div>
-      <h2>{note.title}</h2>
-      <p>{note.content}</p>
-      <small>{note.category}</small>
+    <div className="note-card card">
+      <div className="note-header">
+        <h3>{note.title}</h3>
+        <span className="note-category">{note.category || "General"}</span>
+      </div>
 
-      <br />
-      <br />
-      <button onClick={() => editNote(note)}>
-        Edit
-      </button>
-      <button onClick={() => deleteNote(note.id)}>
-        Delete
-      </button>
-
-      <hr />
+      <p className="note-content">{note.content}</p>
+      <div className="note-actions">
+        <button className="btn secondary-btn" onClick={() => editNote(note)}>
+          Edit
+        </button>
+        <button className="btn danger-btn" onClick={() => deleteNote(note.id)}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 }
