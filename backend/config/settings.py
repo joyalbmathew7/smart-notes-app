@@ -26,9 +26,7 @@ SECRET_KEY = 'django-insecure-pl33jt*3ys2=uyg*1z9z@@%bh5nt=)1$=w&6se!dlekf*v#+b%
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "testserver",
+ "smart-notes-app-15tf.onrender.com",
 ]
 
 
