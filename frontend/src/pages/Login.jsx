@@ -8,6 +8,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
   const loginUser = async () => {
@@ -33,7 +34,12 @@ function Login() {
         error.response?.data?.detail ||
         error.response?.data ||
         "Invalid username or password.";
-      setError(typeof apiMessage === "string" ? apiMessage : JSON.stringify(apiMessage));
+
+      setError(
+        typeof apiMessage === "string"
+          ? apiMessage
+          : JSON.stringify(apiMessage)
+      );
     }
   };
 
@@ -41,7 +47,9 @@ function Login() {
     <div className="auth-page">
       <div className="auth-card">
         <h1 className="auth-title">Welcome back</h1>
-        <p className="auth-subtitle">Login to manage your notes and account.</p>
+        <p className="auth-subtitle">
+          Login to manage your notes and account.
+        </p>
 
         <div className="auth-form">
           <label className="form-label">
@@ -58,19 +66,34 @@ function Login() {
 
           <label className="form-label">
             Password
-            <input
-              type="password"
-              className="input-field"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+
+            <div className="password-wrapper">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="input-field"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+
+              <button
+                type="button"
+                className="show-password-btn"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
           </label>
 
           {error && <div className="error-box">{error}</div>}
 
-          <button type="button" className="btn primary-btn" onClick={loginUser}>
+          <button
+            type="button"
+            className="btn primary-btn"
+            onClick={loginUser}
+          >
             Login
           </button>
 

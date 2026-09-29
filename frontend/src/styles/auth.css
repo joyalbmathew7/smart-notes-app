@@ -1,111 +1,54 @@
-.auth-page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: #eef2ff;
+.password-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.auth-card {
-  width: min(500px, 100%);
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+.password-wrapper .input-field {
+  padding-right: 70px;
 }
 
-.profile-card {
-  max-width: 620px;
-}
+.show-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 
-.auth-title {
-  margin: 0 0 8px;
-  font-size: 32px;
-  color: #0f172a;
-}
+  border: none;
+  background: transparent;
+  color: #4338ca;
 
-.auth-subtitle {
-  margin: 0 0 24px;
-  color: #475569;
-  line-height: 1.6;
-}
-
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: #334155;
+  cursor: pointer;
+  font-size: 14px;
   font-weight: 500;
 }
 
-.input-field {
+.show-password-btn:hover {
+  color: #312e81;
+}
+
+
+.password-wrapper {
+  position: relative;
   width: 100%;
-  border: 1px solid #cbd5e1;
-  border-radius: 14px;
-  padding: 14px 16px;
-  font-size: 16px;
-  color: #0f172a;
-  background: #f8fafc;
 }
 
-.textarea-field {
-  min-height: 140px;
-  resize: vertical;
+.password-wrapper .input-field {
+  padding-right: 70px;
 }
 
-.auth-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.btn {
+.show-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
-  border-radius: 14px;
-  padding: 14px 22px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.primary-btn {
-  background: #4338ca;
-  color: white;
-  box-shadow: 0 16px 40px rgba(67, 56, 202, 0.18);
-}
-
-.secondary-btn {
-  background: #e2e8f0;
-  color: #0f172a;
-}
-
-.danger-btn {
-  background: #ef4444;
-  color: white;
-}
-
-.auth-footer {
-  margin: 16px 0 0;
-  color: #475569;
-}
-
-.auth-footer a {
+  background: transparent;
   color: #4338ca;
-  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.auth-footer a:hover {
-  text-decoration: underline;
+.show-password-btn:hover {
+  color: #312e81;
 }
