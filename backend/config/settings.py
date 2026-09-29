@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users',
     'corsheaders'
 ]
+CORS_ALLOW_CREDENTIALS = True
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -133,5 +134,5 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 CORS_ALLOWED_ORIGINS = [
-     "https://smart-notes-30udwmx1v-joyal5.vercel.app",
+    "https://smart-notes-app-eosin.vercel.app",
 ]
